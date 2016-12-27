@@ -1,11 +1,14 @@
 {
-  "name": "Flat Two Point Oh",
+  "name": "flattwopointoh",
   "version": "1.0.0",
   "description": "Flat Design 2.0",
-  "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sass": "^3.0.0"
-  },
   "author": "Jake Mitchell",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^1.9.1"
+    "gulp-rename": "^1.2.2"
+  }
 }
