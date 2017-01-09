@@ -1,0 +1,13 @@
+/**
+ * Generate a grid width
+ */
+ 
+@mixin grid-element ($n, $d) {
+    width: percentage($n / $d);
+    padding-left: $grid-padding-horiz;
+    padding-right: $grid-padding-horiz;
+    
+    @if not ($use-flex) {
+        float: left;
+    }
+}

@@ -1,0 +1,42 @@
+.form-element {
+    position: relative;
+    color: $font-color-muted;
+    
+    label, .label {
+        position: absolute;
+        pointer-events: none;
+        font-size: 0.75em; // be the same size as an h5 element
+        top: $input-padding + 4px; // additional px compensate for smaller font size
+        left: $input-padding + $grid-padding-horiz; // compensate for grid padding
+        transition: top $input-label-transition-speed ease;
+        
+        &.moved {
+            top: -1.3em;
+        }
+    }
+    
+    input, .input {
+        width: 100%;
+        padding: $input-padding;
+        
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: $input-border-color;
+        background-color: transparent;
+        
+        &.has-value {
+            color: $gray;
+            border-bottom-color: $light-gray;
+        }
+        
+        &:focus, &:active {
+            outline: none;
+            box-shadow: none;
+            border-bottom-color: $color-primary;
+            color: $color-primary;
+        }
+    }
+}

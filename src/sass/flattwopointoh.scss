@@ -1,7 +1,30 @@
+// Resources used throughout files
+@import "variables";
+@import "mixins/mixins";
+
 /**
  * Core Modules
  */
 
 @import "normalize";
+@import "text";
 @import "container";
 @import "grid";
+
+/**
+ * Flat 2.0 Modules
+ */
+ 
+@import "menu";
+@import "card";
+@import "form";
+@import "buttons";
+@import "overlap";
+
+/**
+ * Utilities
+ */
+
+@import "utilities/shadow";
+@import "utilities/background";
+@import "utilities/border";

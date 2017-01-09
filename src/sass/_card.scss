@@ -1,0 +1,32 @@
+.card {
+    width: $card-width;
+    position: relative;
+    display: inline-block;
+    padding: $card-padding;
+    margin: $card-margin;
+    border-radius: $card-border-radius;
+    background: $card-background-color;
+    box-shadow: $card-shadow;
+    
+    .header {
+        @include unpad ($card-padding);
+    }
+    
+    .card {
+        width: 100%;
+        margin: 0;
+    }
+
+    &:not(.squared) .header {
+        border-top-left-radius: $card-border-radius;
+        border-top-right-radius: $card-border-radius;
+    }
+}
+
+.cards {
+    @include clearfix();
+    
+    .card {
+        float: left;
+    }
+}

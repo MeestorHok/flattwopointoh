@@ -1,0 +1,47 @@
+/**
+ * Grid Containers
+ */
+
+.row {
+    position: relative;
+    padding-top: $grid-padding-vert;
+    padding-bottom: $grid-padding-vert;
+    
+    @if($use-flex) {
+        display: flex;
+        flex-direction: row;
+    } @else {
+        @include clearfix();
+    }
+}
+
+/**
+ * Generate Grid Widths
+ */
+
+@each $portion, $numerator in (one:1, two:2, three:3, four:4, five:5, six:6, 
+                                seven:7, eight:8, nine:9, ten:10, eleven:11, twelve:12) {
+    @each $total, $denominator in (whole:1, half:2, third:3, fourth:4, fifth:5, sixth:6, 
+                                seventh:7, eighth:8, ninth:9, tenth:10, eleventh:11, twelfth:12) {
+        @if ($denominator >= $numerator) {
+            
+            @if ($numerator > 1) {
+                @if ($denominator > 2) {
+                    .#{$portion}-#{$total}s {
+                        @include grid-element($numerator, $denominator);
+                    }
+                } @else {
+                    @if ($denominator == 2) {
+                        .#{$portion}-halves {
+                            @include grid-element($numerator, $denominator);
+                        }
+                    }
+                }
+            } @else {
+                .#{$portion}-#{$total} {
+                    @include grid-element($numerator, $denominator);
+                }
+            }
+        }
+    }
+}

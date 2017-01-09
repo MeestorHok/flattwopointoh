@@ -1,0 +1,23 @@
+.overlap {
+    position: relative;
+    
+    @each $side in (top, left) {
+        &.#{$side} {
+            #{$side}: -$overlap-length;
+            
+            &.double {
+                #{$side}: -$overlap-length * 2;
+            }
+        }
+    }
+    
+    @each $side, $opposite in (bottom:top, right:left) {
+        &.#{$side} {
+            #{$opposite}: $overlap-length;
+            
+            &.double {
+                #{$opposite}: $overlap-length * 2;
+            }
+        }
+    }
+}

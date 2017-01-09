@@ -1,0 +1,111 @@
+/**
+ *  ===================
+ * | Table of Contents |
+ *  ===================
+ *
+ * 1.0 - Settings
+ *   1.1 - Colors
+ *   1.2 - General
+ * 2.0 - Text
+ *   2.1 - Fonts
+ *   2.2 - Headings
+ * 3.0 - Grid
+ * 4.0 - Forms
+ * 5.0 - Cards
+ * 
+ */
+ 
+ 
+/**
+ * 1.0 - Settings
+ */
+
+$use-flex:                 true;
+
+
+/**
+ * 1.1 - Colors
+ */
+
+$color-primary:   #4d8afa;
+$color-secondary: #e0d24f;
+$color-success:   #31c46e;
+$color-failure:   #f74f4f;
+
+$darkest-gray:    #454547;
+$dark-gray:       #737375;
+$gray:            #9092a3;
+$light-gray:      #bbbdc7;
+$lightest-gray:   #d2d2d9;
+
+
+/**
+ * 1.2 - General controls
+ */
+
+$rounded-border-radius:    5px;
+$squared-border-radius:    0px;
+$standard-padding:         15px;
+$standard-margin:          $standard-padding;
+$shadow-light:             0px 1px 4px -1px $dark-gray;
+$overlap-length:           40px;
+
+ 
+/**
+ * 2.0 - Text
+ */
+
+$font-weight:      normal;
+$line-height:      1em;
+$font-color:       $darkest-gray;
+$font-color-muted: $light-gray;
+
+// 2.1 - Fonts
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+$font-family: 'Open Sans', sans-serif;
+
+// 2.2 - Headings
+
+$headings-margin:      0.83em;
+$headings-font-family: $font-family;
+$headings-font-weight: bold;
+$headings-line-height: $line-height;
+$headings-font-color:  $font-color;
+
+$h1-font-size: 2em;
+$h2-font-size: 1.5em;
+$h3-font-size: 1.17em;
+$h4-font-size: 1em;
+$h5-font-size: 0.83em;
+$h6-font-size: 0.63em;
+
+
+/**
+ * 3.0 - Grid
+ */
+ 
+$grid-padding-horiz: $standard-padding;
+$grid-padding-vert:  20px;
+
+
+/**
+ * 4.0 - Forms
+ */
+ 
+$input-border-color:            $lightest-gray;
+$input-padding:                 4px;
+$input-label-transition-speed:  0.2s;
+
+
+/**
+ * 5.0 - Cards
+ */
+ 
+$card-width:             250px;
+$card-border-radius:     $rounded-border-radius;
+$card-background-color:  white;
+$card-padding:           $standard-padding;
+$card-margin:            $standard-margin / 2;
+$card-shadow:            $shadow-light;
+
